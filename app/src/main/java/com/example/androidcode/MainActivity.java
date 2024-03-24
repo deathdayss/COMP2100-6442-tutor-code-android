@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.androidcode.findview.FindViewMainActivity;
+import com.example.androidcode.location.LocationActivity;
 import com.example.androidcode.navigate.NavigateMainActivity;
 import com.example.androidcode.orientation.OrientationActivity;
 import com.example.androidcode.passvalue.PassValueMainActivity;
@@ -46,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void toGetOrientationActivity(View v) {
         Intent intent = new Intent(this, OrientationActivity.class);
+        startActivity(intent);
+    }
+
+    public void toLocationActivity(View v) {
+        Intent intent = new Intent(this, LocationActivity.class);
         startActivity(intent);
     }
 }
