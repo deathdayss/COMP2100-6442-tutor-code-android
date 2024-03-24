@@ -15,6 +15,7 @@ import com.example.androidcode.findview.FindViewMainActivity;
 import com.example.androidcode.location.LocationActivity;
 import com.example.androidcode.navigate.NavigateMainActivity;
 import com.example.androidcode.orientation.OrientationActivity;
+import com.example.androidcode.passvalue.PassValueDisplayActivity;
 import com.example.androidcode.passvalue.PassValueMainActivity;
 
 public class MainActivity extends AppCompatActivity {

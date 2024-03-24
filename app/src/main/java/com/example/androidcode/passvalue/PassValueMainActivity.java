@@ -3,7 +3,7 @@ package com.example.androidcode.passvalue;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,8 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.androidcode.R;
 
 public class PassValueMainActivity extends AppCompatActivity {
-    TextView textView;
-
+    EditText inputTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,21 +25,17 @@ public class PassValueMainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        textView = findViewById(R.id.get_text_result);
+        inputTextView = findViewById(R.id.pass_value_input);
     }
 
-    public void toPassValueSubmitActivity(View v) {
-        Intent intent = new Intent(this, PassValueSubmitActivity.class);
-        startActivityForResult(intent, 1);
-    }
+    public void submitPassValueInput(View v) {
+        // get text from input and delete text in the input
+        String inputText = inputTextView.getText().toString();
+        inputTextView.setText("");
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        System.out.println("onActivityResult in PassValueMainActivity");
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == 1 && resultCode == RESULT_OK) {
-            textView.setText(data.getStringExtra("input"));
-        }
+        // pass the data to the new activity
+        Intent intent = new Intent(this, PassValueDisplayActivity.class);
+        intent.putExtra("input", inputText);
+        startActivity(intent);
     }
 }

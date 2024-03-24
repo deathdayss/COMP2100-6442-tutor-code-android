@@ -29,13 +29,13 @@
             android:name=".orientation.OrientationActivity"
             android:exported="false" />
         <activity
-            android:name=".passvalue.PassValueSubmitActivity"
+            android:name=".passvalue.PassValueMainActivity"
             android:exported="false" />
         <activity
             android:name=".navigate.NavigateNextActivity"
             android:exported="false" />
         <activity
-            android:name=".passvalue.PassValueMainActivity"
+            android:name=".passvalue.PassValueDisplayActivity"
             android:exported="false" />
         <activity
             android:name=".findview.FindViewMainActivity"
