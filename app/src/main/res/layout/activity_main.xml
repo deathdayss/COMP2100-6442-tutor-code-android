@@ -44,16 +44,19 @@
             android:text="Pass Value" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/get_orientation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:backgroundTint="#FF9800"
+            android:onClick="toGetOrientationActivity"
+            android:text="Orientation" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/get_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:backgroundTint="#FF9800"
+            android:text="Location" />
     </LinearLayout>
 
     <TextView
