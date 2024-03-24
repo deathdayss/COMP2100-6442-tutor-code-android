@@ -7,12 +7,62 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <LinearLayout
+        android:id="@+id/vertical_linear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="52dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_acitivity">
+
+        <Button
+            android:id="@+id/navigate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="toNavigateActivity"
+            android:text="Navigate" />
+
+        <Button
+            android:id="@+id/find_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="toFindViewActivity"
+            android:text="Find View" />
+
+        <Button
+            android:id="@+id/pass_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="toPassValueActivity"
+            android:text="Pass Value" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/main_acitivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="52dp"
+        android:text="Main Activity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

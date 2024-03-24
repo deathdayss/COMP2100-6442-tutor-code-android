@@ -1,4 +1,4 @@
-package com.example.androidcode;
+package com.example.androidcode.navigate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,17 +10,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.androidcode.findview.FindViewMainActivity;
-import com.example.androidcode.navigate.NavigateMainActivity;
-import com.example.androidcode.passvalue.PassValueMainActivity;
+import com.example.androidcode.R;
 
-public class MainActivity extends AppCompatActivity {
+public class NavigateMainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_navigate_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -28,18 +26,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void toNavigateActivity(View v) {
-        Intent intent = new Intent(this, NavigateMainActivity.class);
-        startActivity(intent);
-    }
-
-    public void toFindViewActivity(View v) {
-        Intent intent = new Intent(this, FindViewMainActivity.class);
-        startActivity(intent);
-    }
-
-    public void toPassValueActivity(View v) {
-        Intent intent = new Intent(this, PassValueMainActivity.class);
+    public void toNavigateNextActivity(View v) {
+        Intent intent = new Intent(this, NavigateNextActivity.class);
         startActivity(intent);
     }
 }
