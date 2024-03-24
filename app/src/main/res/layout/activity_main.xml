@@ -58,6 +58,14 @@
             android:backgroundTint="#FF9800"
             android:onClick="toLocationActivity"
             android:text="Location" />
+
+        <Button
+            android:id="@+id/bookmark_app_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009688"
+            android:onClick="toBookmarkAppActivity"
+            android:text="Bookmark App" />
     </LinearLayout>
 
     <TextView

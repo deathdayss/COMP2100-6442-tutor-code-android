@@ -10,6 +10,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.androidcode.bookmarkapp.BookmarkAppMainActivity;
 import com.example.androidcode.findview.FindViewMainActivity;
 import com.example.androidcode.location.LocationActivity;
 import com.example.androidcode.navigate.NavigateMainActivity;
@@ -52,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void toLocationActivity(View v) {
         Intent intent = new Intent(this, LocationActivity.class);
+        startActivity(intent);
+    }
+
+    public void toBookmarkAppActivity(View v) {
+        Intent intent = new Intent(this, BookmarkAppMainActivity.class);
         startActivity(intent);
     }
 }
