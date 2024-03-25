@@ -24,6 +24,43 @@ public class NavigateMainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        System.out.println("NavigateMainActivity: onCreate()");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        System.out.println("NavigateMainActivity: onStart()");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        System.out.println("NavigateMainActivity: onResume()");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        System.out.println("NavigateMainActivity: onPause()");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        System.out.println("NavigateMainActivity: onStop()");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        System.out.println("NavigateMainActivity: onDestroy()");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        System.out.println("NavigateMainActivity: onRestart()");
     }
 
     public void toNavigateNextActivity(View v) {

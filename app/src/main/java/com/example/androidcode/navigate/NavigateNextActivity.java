@@ -23,6 +23,43 @@ public class NavigateNextActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        System.out.println("NavigateNextActivity: onCreate()");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        System.out.println("NavigateNextActivity: onStart()");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        System.out.println("NavigateNextActivity: onResume()");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        System.out.println("NavigateNextActivity: onPause()");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        System.out.println("NavigateNextActivity: onStop()");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        System.out.println("NavigateNextActivity: onDestroy()");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        System.out.println("NavigateNextActivity: onRestart()");
     }
 
     public void back(View v) {
