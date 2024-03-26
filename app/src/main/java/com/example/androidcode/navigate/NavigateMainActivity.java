@@ -3,6 +3,7 @@ package com.example.androidcode.navigate;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,15 @@ public class NavigateMainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        View.OnClickListener onClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), NavigateNextActivity.class);
+                startActivity(intent);
+            }
+        };
+        Button nextActivityButton = findViewById(R.id.next_activity);
+        nextActivityButton.setOnClickListener(onClickListener);
         System.out.println("NavigateMainActivity: onCreate()");
     }
 
@@ -61,10 +71,5 @@ public class NavigateMainActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
         System.out.println("NavigateMainActivity: onRestart()");
-    }
-
-    public void toNavigateNextActivity(View v) {
-        Intent intent = new Intent(this, NavigateNextActivity.class);
-        startActivity(intent);
     }
 }
