@@ -66,6 +66,14 @@
             android:backgroundTint="#009688"
             android:onClick="toBookmarkAppActivity"
             android:text="Bookmark App" />
+
+        <Button
+            android:id="@+id/login_practice_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009688"
+            android:onClick="toLoginActivity"
+            android:text="Login Practice" />
     </LinearLayout>
 
     <TextView
