@@ -21,20 +21,40 @@
         android:id="@+id/username_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="134dp"
+        android:layout_marginStart="42dp"
         android:layout_marginTop="104dp"
         android:text="username_placeholder"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/username_display_success"
         app:layout_constraintTop_toBottomOf="@+id/login_success" />
 
     <TextView
         android:id="@+id/user_dob_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="36dp"
         android:text="user_dob_placeholder"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dob_display_success"
         app:layout_constraintTop_toBottomOf="@+id/username_display" />
+
+    <TextView
+        android:id="@+id/username_display_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="104dp"
+        android:text="Display Username:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_success" />
+
+    <TextView
+        android:id="@+id/dob_display_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="36dp"
+        android:text="Display DOB:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_display_success" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
